@@ -1,0 +1,24 @@
+.nav-container {
+    button {
+        padding: 25px 10px;
+        background: transparent;
+        border: none;
+    }
+
+    ul {
+        display: none;
+
+        &.showMenu {
+            display: block;
+        }
+    }
+    
+    a {
+        &.link {
+            background-color: yellowgreen !important;
+        }
+        &.link-active {
+            background-color: yellow !important;
+        }
+    }
+}

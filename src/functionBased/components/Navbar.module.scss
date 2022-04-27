@@ -1,24 +1,53 @@
 .nav-container {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row-reverse;
+
     button {
         padding: 25px 10px;
         background: transparent;
         border: none;
+        cursor: pointer;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
     }
 
     ul {
-        display: none;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        // width: 0;
+        position: relative;
+        right: -100%;
+        overflow: hidden;
+
+        transition: all 8s ease-in-out;
 
         &.showMenu {
-            display: block;
+            // width: auto;
+            right: 0;
         }
-    }
-    
-    a {
-        &.link {
-            background-color: yellowgreen !important;
-        }
-        &.link-active {
-            background-color: yellow !important;
+
+        li {
+            list-style-type: none;
+            padding: 0 .8rem;
+            align-self: center;
+
+            a {
+                font-size: 20px;
+                text-decoration: none;
+
+                &.link {
+                    color: #000;
+                }
+                
+                &.link-active {
+                    color: #0075ff52;
+                }
+            }
         }
     }
 }
